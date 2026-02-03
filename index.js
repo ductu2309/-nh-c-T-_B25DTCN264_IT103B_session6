@@ -63,45 +63,47 @@ do {
       }
       break;
     case 3:
-        let searchBook = prompt("nhập tên sách cần tìm kiếm")
-        let findBook = libraries.indexOf(searchBook)
-        if (findBook !== -1) {
-            alert(`Đã tìm thấy sách ${searchBook} trong kho tại vị trí số ${findBook}`)
-        }else{
-            alert(`Không tìm thấy sách ${searchBook} trong kho`)
-        }
+      let searchBook = prompt("nhập tên sách cần tìm kiếm");
+      let findBook = libraries.indexOf(searchBook);
+      if (findBook !== -1) {
+        alert(
+          `Đã tìm thấy sách ${searchBook} trong kho tại vị trí số ${findBook}`,
+        );
+      } else {
+        alert(`Không tìm thấy sách ${searchBook} trong kho`);
+      }
       break;
     case 4:
-        let bookNameUpdate = prompt("Nhập tên sách cần cập nhật:")
-        let bookLocation = libraries.indexOf(bookNameUpdate)
-        if (bookLocation === 1) {
-            let newBookNameUpdate = prompt("Nhập tên mới cho sách ")
-            libraries[bookLocation] = newBookNameUpdate
-            alert(`Cập nhật thành công tên sách ${newBookNameUpdate}`)
-        } else {
-            alert(` Không tìm thấy tên sách ${newBookNameUpdate} trong thu viện`)
-        }
+      let bookNameUpdate = prompt("Nhập tên sách cần cập nhật:");
+      let bookLocation = libraries.indexOf(bookNameUpdate);
+      if (bookLocation !== -1) {
+        let newBookNameUpdate = prompt("Nhập tên mới cho sách ");
+        libraries[bookLocation] = newBookNameUpdate;
+        alert(`Cập nhật thành công tên sách ${newBookNameUpdate}`);
+      } else {
+        alert(` Không tìm thấy tên sách ${newBookNameUpdate} trong thu viện`);
+      }
       break;
     case 5:
-        libraries.reverse();
-        console.log("--- DANH SÁCH SAU KHI ĐẢO NGƯỢC ---");
-        for (let k = 0; k < libraries.length; k++) {
-          console.log(`Index ${k}: ${libraries[k]}`);
-        }
-        alert("Danh sách đã đảo ngược ");
+      libraries.reverse();
+      console.log("--- DANH SÁCH SAU KHI ĐẢO NGƯỢC ---");
+      for (let k = 0; k < libraries.length; k++) {
+        console.log(`Index ${k}: ${libraries[k]}`);
+      }
+      alert("Danh sách đã đảo ngược ");
       break;
     case 6:
-        let libraries2 = ["Sách Kỹ Năng", "Truyện Tranh"]
-        let newLength = libraries.concat(libraries2)
-        console.log(newBookToArray)
-        alert("Đã gộp kho sách thành công");
+      let libraries2 = ["Sách Kỹ Năng", "Truyện Tranh"];
+      let newLibraries = libraries.concat(libraries2);
+      console.log(newLibraries);
+      alert("Đã gộp kho sách thành công");
       break;
     case 7:
-        alert("Hẹn gặp lại!")
+      alert("Hẹn gặp lại!");
       break;
 
     default:
-        alert('Lựa chọn không hợp lệ! vui lòng chọn từ 1 đến 7!!!!!')
+      alert("Lựa chọn không hợp lệ! vui lòng chọn từ 1 đến 7!!!!!");
       break;
   }
 } while (choice !== 7);
