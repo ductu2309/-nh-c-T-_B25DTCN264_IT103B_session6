@@ -81,7 +81,12 @@ do {
         libraries[bookLocation] = newBookNameUpdate;
         alert(`Cập nhật thành công tên sách ${newBookNameUpdate}`);
       } else {
-        alert(` Không tìm thấy tên sách ${newBookNameUpdate} trong thu viện`);
+        alert(`Không tìm thấy tên sách ${bookNameUpdate} trong thu viện`);
+      }
+
+      console.log("Danh sách hiện tại:");
+      for (let h = 0; h < libraries.length; h++) {
+        console.log(`${h + 1}. Môn ${libraries[h]}`);
       }
       break;
     case 5:
