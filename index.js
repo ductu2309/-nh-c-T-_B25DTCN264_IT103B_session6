@@ -93,7 +93,7 @@ do {
       libraries.reverse();
       console.log("--- DANH SÁCH SAU KHI ĐẢO NGƯỢC ---");
       for (let k = 0; k < libraries.length; k++) {
-        console.log(`Index ${k}: ${libraries[k]}`);
+        console.log(`${k + 1}: ${libraries[k]}`);
       }
       alert("Danh sách đã đảo ngược ");
       break;
@@ -103,6 +103,7 @@ do {
       console.log(newLibraries);
       alert("Đã gộp kho sách thành công");
       break;
+
     case 7:
       alert("Hẹn gặp lại!");
       break;
